@@ -1,0 +1,13 @@
+pipeline:
+  install:
+    image: node:8.6.0
+    commands:
+      - node -v
+      - npm -v
+  
+  testing:
+    image: node:8.6.0
+    group: testing
+    commands:
+      - npm run test:jenkins
+      - npm run test:coverage
